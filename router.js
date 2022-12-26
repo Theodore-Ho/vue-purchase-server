@@ -17,8 +17,8 @@ router.get("/home/dataCount", (req, res) => {
       info: "数据统计",
       success: true,
       data: {
-        "list|3": [{
-          "id|+1": 1,
+        list: {
+          "id": 1,
           "viewsTotal|10000-100000": 1,
           "views|1-30000": 1,
           viewsFun: function () {
@@ -50,7 +50,7 @@ router.get("/home/dataCount", (req, res) => {
               ];
             }
           },
-        }],
+        },
       },
     })
   );
@@ -71,8 +71,7 @@ router.get("/home/orderinfo", (req, res) => {
     Mock.mock({
       info: "订单统计信息",
       success: true,
-      "list|3": [{
-        "id|+1": 1,
+      list: {
         "orderCount|1-100000": 1,
         "curOrderCount|1-1000": 1,
         count: function () {
@@ -99,7 +98,7 @@ router.get("/home/orderinfo", (req, res) => {
         },
         department: "",
         branchSchool: "",
-      }]
+      }
     })
   );
 });

@@ -13,7 +13,7 @@
           "num": "12225",
           "employee_id": "4130b64eaf2c49c188171f7522b3fd4a",
           "merchant_department_id": "",
-          "name": "肉类",
+          "name": "Meat",
           "department": "",
           "branchSchool": ""
         },
@@ -23,7 +23,7 @@
           "num": "9134",
           "employee_id": "693775dab25741888767b403ca760442",
           "merchant_department_id": "0bd5e3d4947243af80601fd1592ea426",
-          "name": "水产",
+          "name": "Seafood",
           "department": "",
           "campus": "海淀校区"
         },
@@ -33,7 +33,7 @@
           "num": "23024",
           "employee_id": "b73a17e4c9d740de9fe9f77b00cf1c62",
           "merchant_department_id": "fee1b106fd9a42a4bb3a2a65fdeda872",
-          "name": "蔬菜",
+          "name": "Vegetable",
           "department": "",
           "campus": "朝阳校区"
         },
@@ -43,7 +43,7 @@
           "num": "4500",
           "employee_id": "188b4d6337c84902aa5a5d87a35fe90e",
           "merchant_department_id": "fee1b106fd9a42a4bb3a2a65fdeda872",
-          "name": "冷饮食品",
+          "name": "Frozen Food",
           "department": "",
           "campus": "朝阳校区"
         },
@@ -53,7 +53,7 @@
           "num": "21500",
           "employee_id": "188b4d6337c84902aa5a5d87a35fe90e",
           "merchant_department_id": "fee1b106fd9a42a4bb3a2a65fdeda872",
-          "name": "水果",
+          "name": "Fruit",
           "department": "",
           "campus": "朝阳校区"
         }
