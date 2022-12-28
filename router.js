@@ -159,4 +159,26 @@ router.get("/product/search", (req, res) => {
 });
 
 
+/**
+ * 商品删除接口 id
+ */
+router.get("/product/deleteItemById", (req, res) => {
+  var id = req.query.id;
+  const sql = "delete from project where id=?";
+  const arr = [id];
+  sqlFn(sql, arr, (result) => {
+    if (result.affectedRows > 0) {
+      res.send({
+        status: 200,
+        msg: "删除成功",
+      });
+    } else {
+      res.send({
+        status: 500,
+        msg: "删除失败",
+      });
+    }
+  });
+});
+
 module.exports = router;
