@@ -181,4 +181,29 @@ router.get("/product/deleteItemById", (req, res) => {
   });
 });
 
+
+/**
+ * 商品添加 类目选择
+ * 接口说明：接口不同的参数cid 返回不同的类目数据 后台接受变量：type
+ */
+router.get("/product/itemCategory/selectItemCategoryByParentId", (req, res) => {
+  const type = req.query.type || 1;
+  console.log("type", type);
+  const sql = "select * from category where type=?";
+  var arr = [type];
+  sqlFn(sql, arr, (result) => {
+    if (result.length > 0) {
+      res.send({
+        status: 200,
+        result,
+      });
+    } else {
+      res.send({
+        status: 500,
+        msg: "暂无数据",
+      });
+    }
+  });
+});
+
 module.exports = router;
