@@ -291,4 +291,38 @@ router.get("/product/insert", (req, res) => {
   })
 })
 
+
+/**
+ * 修改商品
+ * id, title cid  category sellPoint price num descs paramsInfo image
+ */
+
+router.get("/product/edit", (req, res) => {
+  var id = req.query.id;
+  var title = req.query.title || "";
+  var sellPoint = req.query.sellPoint || "";
+  var price = req.query.price || "";
+  var cid = req.query.cid || "";
+  var category = req.query.category || "";
+  var num = req.query.num || "";
+  var desc = req.query.descs || "";
+  var paramsInfo = req.query.paramsInfo || "";
+  var image = req.query.image || "";
+  var sql = "update project set title=?,sellPoint=?,price=?,cid=?,category=?,num=?,descs=?,paramsInfo=?,image=? where id=?";
+  var arr = [title, sellPoint, price, cid, category, num, desc, paramsInfo, image, id];
+  sqlFn(sql, arr, result => {
+      if (result.affectedRows > 0) {
+          res.send({
+              status: 200,
+              msg: "修改成功"
+          })
+      } else {
+          res.send({
+              status: 500,
+              msg: "修改失败"
+          })
+      }
+  })
+})
+
 module.exports = router;
