@@ -16,7 +16,6 @@ function sqlFun(sql, arr,callback) {
         if (error) {
             console.log('数据库语句错误');
             console.log(error);
-            console.log(result);
             return;
         }
         callback(result)
