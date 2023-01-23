@@ -325,4 +325,28 @@ router.get("/product/edit", (req, res) => {
   })
 })
 
+/**
+ * 批量删除 batchDelete  idArr Array  id标识
+ * sql = "delete from A where id in (1,2,3)"
+ * 接受 参数 字符串  （数组转字符串）
+ */
+router.get("/product/batchDelete", (req, res) => {
+  let ids = req.query.ids; //
+  const sql =`delete from project where id in (${ids})`;
+
+  sqlFn(sql, null, result => {
+    if (result.affectedRows > 0) {
+      res.send({
+        status: 200,
+        msg: "Delete Success"
+      })
+    } else {
+      res.send({
+        status: 500,
+        msg: "Delete Fail"
+      })
+    }
+  })
+})
+
 module.exports = router;
