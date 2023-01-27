@@ -1,51 +1,43 @@
 {
     "code": 0,
-    "message": "获取权限成功",
+    "message": "Success get the rights list",
     "data": [
         {
-            "name": "订单管理",
+            "name": "Order Manage",
             "children": [
                 {
-                    "name": "订单列表"
+                    "name": "Order List"
                 },
                 {
-                    "name": "汇总清单"
+                    "name": "Order Collect"
                 },
                 {
-                    "name": "订单审核"
+                    "name": "Order Approve"
                 }
             ]
         },
         {
-            "name": "产品管理",
+            "name": "Product Manage",
             "children": [
                 {
-                    "name": "产品列表"
+                    "name": "Product List"
                 },
                 {
-                    "name": "产品分类"
+                    "name": "Product Category"
                 },
                 {
-                    "name": "添加商品"
+                    "name": "Add Product"
                 }
             ]
         },
         {
-            "name": "广告分类",
+            "name": "System Manage",
             "children": [
                 {
-                    "name": "广告列表"
-                }
-            ]
-        },
-        {
-            "name": "系统管理",
-            "children": [
-                {
-                    "name": "部门管理"
+                    "name": "Department Manage"
                 },
                 {
-                    "name": "角色管理"
+                    "name": "Role Manage"
                 }
             ]
         }
